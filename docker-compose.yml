@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: httpd:latest
+    volumes:
+      - ./html:/usr/local/apache2/htdocs/
+    ports:
+      - "8082:80"
+  web1:
+    image: nginx:latest
+    ports:
+      - "8083:80"
